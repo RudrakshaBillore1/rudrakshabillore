@@ -9,14 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
     "axios": "0.21.1",
+    "comma-number": "^2.1.0",
+    "fs": "^0.0.1-security",
+    "i": "^0.3.7",
     "next": "10",
     "next-sanity": "^0.6.0",
     "next-themes": "0.2.0",
+    "npm": "^8.17.0",
     "react": "17",
     "react-dom": "17",
     "react-portable-text": "^0.4.3",
-    "react-rough-notation": "1.0.1"
+    "react-rough-notation": "1.0.1",
+    "sendgrid": "^5.2.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.8",

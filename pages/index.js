@@ -9,8 +9,7 @@ import userData from "@constants/data";
 import { createClient } from "next-sanity";
 import imageUrlBuilder from '@sanity/image-url'
 import Link from "next/dist/client/link";
-import YtlLists from "@components/YtlLists";
-import LinkdinPosts from "@components/LinkdinPosts";
+
 
 export default function Home({ repositories , blogs }) {
   const client = createClient({
@@ -30,17 +29,40 @@ export default function Home({ repositories , blogs }) {
 
       <div className="bg-[#F1F1F1] -mt-40 dark:bg-gray-900 pb-40">
       <div className="bg-grey-50 max-w-6xl mx-auto" id="blog">
-        <div className="container py-16 md:py-20 justify-between items-center md:pt-40 mx-10">
-          <h2 className="text-6xl lg:text-8xl max-w-lg font-bold text-gray-500 my-20 md:my-0 md:text-white dark:text-gray-600 text-center lg:text-left font-header  font-semibold   text-gray-500   text-primary sm:text-5xl ">
+        <div className="flex flex-col md:flex-row justify-between items-center pt-40 mx-10 md:my-20 lg:my-0">
+          <h2 className="text-6xl lg:text-9xl max-w-lg font-bold text-gray-500 my-20 md:my-0 md:text-white dark:text-gray-600 text-center lg:text-left ">
             My Blogs
           </h2>
           
-          <div className="mx-auto grid w-full grid-cols-1 gap-6 pt-12 sm:w-3/4 lg:w-full lg:grid-cols-3 xl:gap-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-10 lg:-mt-10 gap-y-20">
+               <a
+            href= "/Blogs"
+            className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-white shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center dark:text-gray-700"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              className="bi bi-arrow-up-right-square"
+              stroke="4"
+              strokeWidth="4"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fillRule="evenodd"
+                d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707l-4.096 4.096z"
+              />
+            </svg>
+            <p>View My Blogs</p>
+          </a>
+        </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-10 lg:-mt-10 gap-y-20">
 
             {blogs.map((item) => { 
               return <Link key={item.slug.current} href={"/blog/" + item.slug.current} className="shadow">
               <div><div style={{"backgroundImage": `url(${builder.image(item.blogimage).width(200).url() || '/assets/img/post-01.png'})`}}
-                className="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72">
+                className="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72 transform hover:scale-125 transition duration-2000 ease-out">
                 <span
                   className="absolute inset-0 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to bg-cover bg-center bg-no-repeat opacity-10 transition-opacity group-hover:opacity-50"></span>
                 <span
@@ -50,16 +72,17 @@ export default function Home({ repositories , blogs }) {
               <div className="bg-white py-6 px-5 xl:py-8">
                 <span className="block font-body text-lg font-semibold text-black"> {item.title}</span>
                 <span className="block pt-2 font-body text-grey-20">{item.metadesc}</span>
-              </div></div>
+              </div>
+              </div>
             </Link>
              })}
               </div>
               </div>
-             </div>
+             
       </div>
 
-      <YtlLists/>
-      <LinkdinPosts/>
+      
+     
       
      
       
@@ -92,4 +115,3 @@ export const getServerSideProps = async (context) => {
 
   
 };
-

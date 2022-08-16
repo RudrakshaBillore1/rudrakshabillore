@@ -5,7 +5,7 @@ import userData from '@constants/data'
 const LinkdinPosts = () => {
   return (
   
-  <div  className= "bg-[#F1F1F1] -mt-40 dark:bg-gray-900 pb-40">
+  
 <section className="bg-[#F1F1F1] -mt-40 dark:bg-gray-900 pb-40">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center md:pt-40 mx-10">
@@ -36,18 +36,12 @@ const LinkdinPosts = () => {
           </a>
         </div>
 
-        <iframe className = " h-100  sm:w-10 " src="https://www.linkedin.com/embed/feed/update/urn:li:share:6960430171329818624" height="552" width="504" frameborder="0" allowfullscreen="" title="Embedded post"/>
+        <iframe className = " h-100  " src="https://www.linkedin.com/embed/feed/update/urn:li:share:6960430171329818624" height="552" width="504" frameborder="0" allowfullscreen="" title="Embedded post"/>
       </div>
       </section>
       
-      
-      <section className= "grid md:grid-cols-3 gap-8 lg:-mt-8 pb-40">
-      <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="rudraksha-billore-169899239" data-version="v1">
-        <a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/rudraksha-billore-169899239?trk=profile-badge">Rudraksha Billore</a></div>
             
-              </section>
-      
-      </div>
+    
   )
 }
 

@@ -36,13 +36,18 @@ export default function ContainerBlock({ children, ...customMeta }) {
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="/" />
+        <meta name="twitter:site" content="https://rudrakshabillore.vercel.app" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
         {meta.date && (
           <meta property="article:published_time" content={meta.date} />
         )}
+        
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+         <script defer src="https://unpkg.com/@alpine-collective/toolkit@1.0.0/dist/cdn.min.js" ></script>
+         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
       </Head>
       <main className="dark:bg-gray-800 w-full">
         <Navbar />

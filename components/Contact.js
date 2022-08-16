@@ -1,10 +1,94 @@
 import React from "react";
 import userData from "@constants/data";
+import { useState } from "react";
 
 export default function Contact() {
+
+  const [fullname, setFullname] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  //   Form validation
+  const [errors, setErrors] = useState({});
+
+  //   Setting button text
+  const [buttonText, setButtonText] = useState("Send");
+
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [showFailureMessage, setShowFailureMessage] = useState(false);
+
+  const handleValidation = () => {
+    let tempErrors = {};
+    let isValid = true;
+
+    if (fullname.length <= 0) {
+      tempErrors["fullname"] = true;
+      isValid = false;
+    }
+    if (email.length <= 0) {
+      tempErrors["email"] = true;
+      isValid = false;
+    }
+    
+    if (message.length <= 0) {
+      tempErrors["message"] = true;
+      isValid = false;
+    }
+
+    setErrors({ ...tempErrors });
+    console.log("errors", errors);
+    return isValid;
+  };
+
+  //   const [form, setForm] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    let isValidForm = handleValidation();
+
+    if (isValidForm) {
+      setButtonText("Sending");
+      const res = await fetch("/api/sendgrid", {
+        body: JSON.stringify({
+          email: email,
+          fullname: fullname,
+          message: message,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      });
+
+      const { error } = await res.json();
+      if (error) {
+        console.log(error);
+        setShowSuccessMessage(false);
+        setShowFailureMessage(true);
+        setButtonText("Send");
+
+        // Reset form fields
+        setFullname("");
+        setEmail("");
+        setMessage("");
+        return;
+      }
+      setShowSuccessMessage(true);
+      setShowFailureMessage(false);
+      setButtonText("Send");
+      // Reset form fields
+      setFullname("");
+      setEmail("");
+      setMessage("");
+      
+    }
+    console.log(fullname, email, message);
+  };
+
   return (
     <section>
-      <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800 antialiased">
+      <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800 antialiased ">
         <h1 className=" text-5xl md:text-9xl font-bold py-20 text-center md:text-left">
           Contact
         </h1>
@@ -141,42 +225,86 @@ export default function Contact() {
               </a>
             </div>
           </div>
-          <form className="form rounded-lg bg-white p-4 flex flex-col">
-            <label htmlFor="name" className="text-sm text-gray-600 mx-4">
+          <form
+          onSubmit={handleSubmit} 
+          className="form rounded-lg bg-white p-4 flex flex-col ">
+            <label htmlFor="fullname" className="text-sm text-gray-600 mx-4">
               {" "}
               Your Name
             </label>
             <input
               type="text"
+              value={fullname}
+              onChange={(e) => {
+                setFullname(e.target.value);
+              }}
+              name="fullname"
               className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
-              name="name"
+              
             />
+
+            {errors?.fullname && (
+            <p className="text-red-500">Fullname cannot be empty.</p>
+          )}
+
             <label htmlFor="email" className="text-sm text-gray-600 mx-4 mt-4">
               Email
             </label>
             <input
               type="text"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
               className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
               name="email"
             />
+                      {errors?.email && (
+            <p className="text-red-500">Email cannot be empty.</p>
+          )}
             <label
               htmlFor="message"
               className="text-sm text-gray-600 mx-4 mt-4"
             >
               Message
             </label>
+
             <textarea
               rows="4"
               type="text"
               className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
               name="message"
-            ></textarea>
+              value={message}
+              onChange={(e) => {
+                setMessage(e.target.value);
+              }}
+            >
+
+            </textarea>
+            {errors?.message && (
+            <p className="text-red-500">Message body cannot be empty.</p>
+          )}
             <button
               type="submit"
               className="bg-blue-500 rounded-md w-1/2 mx-4 mt-8 py-2 text-gray-50 text-xs font-bold"
             >
               Send Message
             </button>
+            <div className="text-left">
+            {showSuccessMessage && (
+    
+
+              <p className="text-green-500 font-semibold text-sm my-2">
+                Thankyou! Your Message has been Submited. I will contact you soon and Please check email
+              </p>
+              
+            )}
+            {showFailureMessage && (
+              <p className="text-red-500">
+                Oops! Something went wrong, please try again.
+              </p>
+            )}
+          </div>
           </form>
         </div>
       </div>
