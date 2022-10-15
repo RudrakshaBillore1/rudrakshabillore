@@ -301,7 +301,7 @@ export default function Contact() {
             )}
             {showFailureMessage && (
               <p className="text-red-500">
-                Oops! Something went wrong, please try again.
+                Oops! Something went wrong, please try again. or please email me
               </p>
             )}
           </div>

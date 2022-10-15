@@ -35,7 +35,7 @@ export default function FavouriteProjects() {
         <div className="grid md:grid-cols-3 gap-8 lg:-mt-8 pb-40">
           {/* Single card */}
           <a
-            href="https://"
+            href="https://rudrakshabillore.vercel.app"
             className="w-full block col-span-3 shadow-2xl"
           >
             <div className="relative overflow-hidden">
@@ -54,7 +54,7 @@ export default function FavouriteProjects() {
           </a>
           {/* Single card */}
           <a
-            href="https://https://rudrakshabillore1.github.io/react-calculator.github.io/"
+            href="https://rudrakshabillore1.github.io/react-calculator.github.io/"
             className="w-full block col-span-3  sm:col-span-2 shadow-2xl"
           >
             <div className="relative overflow-hidden">

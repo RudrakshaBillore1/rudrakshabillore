@@ -9,7 +9,7 @@ import userData from "@constants/data";
 import { createClient } from "next-sanity";
 import imageUrlBuilder from '@sanity/image-url'
 import Link from "next/dist/client/link";
-
+import SocialMedia from "@components/SocialMedia";
 
 export default function Home({ repositories , blogs }) {
   const client = createClient({
@@ -57,12 +57,12 @@ export default function Home({ repositories , blogs }) {
           </a>
         </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-10 lg:-mt-10 gap-y-20">
+          <div className="grid grid-cols-1  md:grid-cols-3 pb-40md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-10 lg:-mt-10 gap-y-20  ">
 
             {blogs.map((item) => { 
-              return <Link key={item.slug.current} href={"/blog/" + item.slug.current} className="shadow">
+              return <Link key={item.slug.current} href={"/blog/" + item.slug.current} className=" relative overflow-hidden  w-full  shadow-2xl">
               <div><div style={{"backgroundImage": `url(${builder.image(item.blogimage).width(200).url() || '/assets/img/post-01.png'})`}}
-                className="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72 transform hover:scale-125 transition duration-2000 ease-out">
+                className="group relative h-72 bg-cover  bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72  transform hover:scale-110 transition duration-2000 ease-out  relative overflow-hidden">
                 <span
                   className="absolute inset-0 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to bg-cover bg-center bg-no-repeat opacity-10 transition-opacity group-hover:opacity-50"></span>
                 <span
@@ -83,12 +83,12 @@ export default function Home({ repositories , blogs }) {
 
       
      
-      
-     
+     <SocialMedia/>
       
     </ContainerBlock>
   );
 }
+
 
 
 export const getServerSideProps = async (context) => {

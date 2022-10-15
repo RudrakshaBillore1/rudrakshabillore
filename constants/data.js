@@ -9,7 +9,7 @@ const userData = {
   projects: [
     {
       title: "NextJS-Portfolio",
-      link: "",
+      link: "https://rudrakshabillore.vercel.app",
       imgUrl: "/portfolio.png",
     },
     {
@@ -18,7 +18,7 @@ const userData = {
       imgUrl: "/socialmedia.png",
     },
     {
-      title: "Reactjs-MusicPlayer",
+      title: "Nextjs-MusicPlayer",
       link: "https://github.com/RudrakshaBillore1/RudrakshaBillore1",
       imgUrl: "/music-player.png",
     },
@@ -56,7 +56,7 @@ const userData = {
       `After learning HTML and struggling with CSS, I came up with a brilliant idea of using bootstrap so that I don't have to style everything by myself and - for obvious reasons - if you knew bootstrap, you were cool.`,
       `But now, I'm a legend. I've been coding in React, Angular, Vue, Svelte, Node.js, Express, MongoDB, MySQL, Bootstrap, Tailwind, C, C++, C#, Python,  Java  and YouDontKnowShit programming language etc to name a few. Although I barely know the syntax (Psst, Stack overflow!), I consider myself a Ninja developer I'm laughing right now.`,
     ],
-    currentProject: "",
+    currentProject: "MernDevs - The Social Media for Developers ",
     currentProjectUrl: "",
   },
   experience: [
