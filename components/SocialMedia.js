@@ -1,4 +1,4 @@
-import {React  , useEffect, useState} from 'react'
+import {React  , useState} from 'react'
 
 import userData from '@constants/data'
 
@@ -10,7 +10,7 @@ import {
    
   } from 'next-share';
 
-import {FiPhoneCall} from 'react-icons/fi'
+  import {FiPhoneCall} from 'react-icons/fi'
 
 
 const SocialMedia = () => {
@@ -33,7 +33,7 @@ const SocialMedia = () => {
     return ( 
       <div className="dark:text-white relative ">
         {visible && (  
-            <div className="fixed inline transition ease-in-out  bottom-64 md:bottom-34 left-6 bg-transprant  h-8 w-8 lg:h-10  lg:w-10  md:h-4 md:w-4 cursor-pointer   hover:animate-none hover:fill-yellow-300 hover:-translate-y-1 hover:scale-110">
+            <div className="fixed inline transition ease-in-out  bottom-64 md:bottom-34 left-2 bg-transprant  h-7 w-7 lg:h-10  lg:w-10  md:h-2 md:w-2 cursor-pointer   hover:animate-none hover:fill-yellow-300 hover:-translate-y-1 hover:scale-110">
             <div className="" >
    
      
@@ -71,10 +71,12 @@ const SocialMedia = () => {
         <WhatsappIcon size={32} round />
      </WhatsappShareButton>
 
+
       <LinkedinShareButton
      url = {userData.socialLinks.linkedin}>
         <LinkedinIcon size={32} round />
      </LinkedinShareButton>
+
           </div>
           </div>
           
