@@ -35,5 +35,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-#Api
-SENDGRID_API_KEY= YOUR_API_KEY_HERE
+
