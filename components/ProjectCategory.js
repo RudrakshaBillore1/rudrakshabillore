@@ -2,7 +2,7 @@ import React from "react";
 import { useTheme } from "next-themes";
 import categoryData from "@constants/category";
 import image from "next/image";
-import { WebDevelopmentProjects } from "./AllCategory";
+
 
 
 

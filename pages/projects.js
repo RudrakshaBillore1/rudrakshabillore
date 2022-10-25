@@ -4,7 +4,7 @@ import ContainerBlock from "../components/ContainerBlock";
 import Projects from "../components/Projects";
 import getLatestRepos from "@lib/getLatestRepos";
 import userData from "@constants/data";
-import ProjectsCategory from "@components/ProjectCategory";
+
 
 export default function projects({ repositories }) {
   return (
