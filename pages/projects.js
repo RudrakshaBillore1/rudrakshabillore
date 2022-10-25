@@ -10,7 +10,6 @@ export default function projects({ repositories }) {
   return (
     <ContainerBlock title="Projects - Rudraksha Billore">
       <Projects />
-      <ProjectsCategory/>
       <LatestCode repositories={repositories} />
    
     </ContainerBlock>

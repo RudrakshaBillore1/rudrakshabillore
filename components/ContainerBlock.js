@@ -10,10 +10,12 @@ export default function ContainerBlock({ children, ...customMeta }) {
   const router = useRouter();
 
   const meta = {
-    title: "I am Rudrak is not definedsha Billore - Developer, Writer, Creator and YouTuber",
+    title: "I am Rudraksha Billore - Developer, Writer, Creator and YouTuber",
     description: `I've been developing websites for 3 years straight. Get in touch with me to know more.`,
     image:  "avatar.png" ,
     type: "website",
+    keywords: "Rudraksha Billore, Rudraksha Billore portfoilo , rudraksh , rudraksh Billore",
+    ogTitle: "Rudraksha Billore",
     ...customMeta,
   };
   return (
@@ -50,7 +52,8 @@ export default function ContainerBlock({ children, ...customMeta }) {
          <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
       </Head>
-      <main className="dark:bg-gray-800 w-full">
+
+   <main className="dark:bg-gray-800 w-full">
         <Navbar />
         <ScrollButton/>
         <div>{children}</div>
