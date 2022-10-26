@@ -21,7 +21,11 @@ export default function Home({ repositories , blogs }) {
   return (
     <ContainerBlock
       title= "Rudraksha Billore - Developer, Writer, Creator"
-      description="This is a built specifically for my blog - Creating a developer portfolio that gets a job."
+      description="I am Rudraksha Billore Web Developer and Android Developer.
+      I've been developing websites for 3 years straight.
+      I  like to write blogs .I Write very interesting blogs. 
+      Read my blogs and See My interesting project.
+      Get in touch with me to know more.."
     >
       <Hero />
       <FavouriteProjects />

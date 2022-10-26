@@ -3,6 +3,9 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
 }
+const withOffline = require("next-offline");
+
+
 
 module.exports = {
   webpack: (config, { isServer }) => {

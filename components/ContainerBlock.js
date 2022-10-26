@@ -33,8 +33,10 @@ export default function ContainerBlock({ children, ...customMeta }) {
           rel="canonical"
           href={`https://rudrakshabillore.vercel.app${router.asPath}`}
         />
+       
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Rudraksha Billore" />
+       
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
