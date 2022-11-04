@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: rudrakshabillore.vercel.app
+Token: ee02c794fa435e25808951c756047d2aa2bf6f9360b27c643bfaa37754e70699
