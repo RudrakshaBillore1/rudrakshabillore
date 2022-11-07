@@ -47,6 +47,11 @@ const userData = {
       link: "https://github.com/RudrakshaBillore1/RudrakshaBillore1",
       imgUrl: "university-finder.png",
     },
+    {
+     title: "React-Compiler",
+     link:"",
+     imgUrl:"index.png",
+    },
   ],
   about: {
     title:

@@ -36,7 +36,9 @@ export default function ContainerBlock({ children, ...customMeta }) {
        
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Rudraksha Billore" />
-       
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/icon.png"></link>
+        <meta name="theme-color" content="#fff" />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />

@@ -2,9 +2,8 @@
   "name": "Rudraksha Billore Portfolio",
   "short_name": "rudraksha Billore",
   "start_url": "https://rudrakshabillore.vercel.app/",
-  "display": "standalone",
   "background_color": "#FFFFFF",
-  "theme_color": "#FFFFFF",
+  "display": "standalone",
   "orientation": "portrait-primary",
   "icons": [
     {
