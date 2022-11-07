@@ -16,17 +16,22 @@ module.exports = {
       }
     }
 
-    return config
-  }
-}
 
-
-const withPWA = require("next-pwa");
-
+const withPWA  = require("next-pwa");
 module.exports = withPWA({
+ //...before
   pwa: {
     dest: "public",
     register: true,
     skipWaiting: true,
   },
+  //...after
 });
+
+
+
+    return config
+  }
+}
+
+
