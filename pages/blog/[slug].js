@@ -17,6 +17,8 @@ const Post = ({ blog, profile }) => {
       <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
 
       <title>{blog.title}</title>
+      
+      <link rel="icon" herf="/avatar.png"/>
 
       <meta property="og:title" content="How to become a frontend developer | Atom Template" />
 
