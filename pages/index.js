@@ -66,7 +66,7 @@ export default function Home({ repositories , blogs }) {
             {blogs.map((item) => { 
               return <Link key={item.slug.current} href={"/blog/" + item.slug.current} className=" relative overflow-hidden  w-full  shadow-2xl">
               <div><div style={{"backgroundImage": `url(${builder.image(item.blogimage).width(200).url() || '/assets/img/post-01.png'})`}}
-                className="group relative h-72 bg-cover  bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72  transform hover:scale-110 transition duration-2000 ease-out  relative overflow-hidden">
+                className="group relative h-72 bg-cover  bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72  transform hover:scale-110 transition duration-2000 ease-out  overflow-hidden">
                 <span
                   className="absolute inset-0 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to bg-cover bg-center bg-no-repeat opacity-10 transition-opacity group-hover:opacity-50"></span>
                 <span

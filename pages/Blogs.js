@@ -24,10 +24,10 @@ export default function Blogs ({blogs}) {
   return (
    <ContainerBlock>
 
-    <div>
+    <div className='bg-[#F1F1F1] -mt-40 dark:bg-gray-900 pb-40'>
         
-         <div className="bg-grey-50 my-12" id="blog">
-        <div className="container mx-auto py-16 md:py-20">
+         <div className="bg-grey-50  max-w-6xl mx-auto" id="blog my-12" >
+        <div className="container mx-auto py-16 md:py-20 flex flex-col md:flex-row justify-between items-center pt-40  md:my-20 lg:my-0">
           <h2 className="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
             I also like to write
           </h2>
@@ -41,7 +41,7 @@ export default function Blogs ({blogs}) {
             {blogs.map((item) => { 
               return <Link key={item.slug.current} href={"/blog/" + item.slug.current} className=" relative overflow-hidden  w-full  shadow-2xl">
               <div><div style={{"backgroundImage": `url(${builder.image(item.blogimage).width(200).url() || '/assets/img/post-01.png'})`}}
-                className="group relative h-72 bg-cover  bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72  transform hover:scale-110 transition duration-2000 ease-out  relative overflow-hidden">
+                className="group relative h-72 bg-cover  bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72  transform hover:scale-110 transition duration-2000 ease-out   overflow-hidden">
                 <span
                   className="absolute inset-0 block bg-gradient-to-b from-blog-gradient-from to-blog-gradient-to bg-cover bg-center bg-no-repeat opacity-10 transition-opacity group-hover:opacity-50"></span>
                 <span
