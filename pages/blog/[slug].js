@@ -20,7 +20,7 @@ const Post = ({ blog, profile }) => {
       
       <link rel="icon" herf="/avatar.png"/>
 
-      <meta property="og:title" content="How to become a frontend developer | Atom Template" />
+      <meta property="og:title" content="Rudraksha Billore " />
 
       <meta property="og:locale" content="en_US" />
 
@@ -33,7 +33,7 @@ const Post = ({ blog, profile }) => {
 
       <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
 
-      <meta name="theme-color" content="#5540af" />
+      <meta name="theme-color" content="" />
 
       <meta property="og:site_name" content="Atom Template" />
 
