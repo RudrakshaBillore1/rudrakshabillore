@@ -27,7 +27,7 @@ export default function Blogs ({blogs}) {
     <div className='bg-[#F1F1F1] -mt-40 dark:bg-gray-900 pb-40'>
         
          <div className="bg-grey-50  max-w-6xl mx-auto" id="blog my-12" >
-        <div className="container mx-10 py-16 md:py-20 flex flex-col md:flex-row justify-between items-center pt-40  md:my-20 lg:my-0">
+        <div className="container mx-10 py-16 md:py-20">
           <h2 className="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
             I also like to write
           </h2>
