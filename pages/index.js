@@ -38,7 +38,7 @@ export default function Home({ repositories , blogs }) {
           <h2 className="text-6xl lg:text-9xl max-w-lg font-bold text-gray-500 my-20 md:my-0 md:text-white dark:text-gray-600 text-center lg:text-left ">
             My Blogs
           </h2>
-          <Link href="/projects">
+          <Link href="/Blogs">
                <a
             className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-white shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center dark:text-gray-700"
           >
