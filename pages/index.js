@@ -37,9 +37,8 @@ export default function Home({ repositories , blogs }) {
           <h2 className="text-6xl lg:text-9xl max-w-lg font-bold text-gray-500 my-20 md:my-0 md:text-white dark:text-gray-600 text-center lg:text-left ">
             My Blogs
           </h2>
-          
+          <Link href="/projects">
                <a
-            href= "/Blogs"
             className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-white shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center dark:text-gray-700"
           >
             <svg
@@ -59,6 +58,7 @@ export default function Home({ repositories , blogs }) {
             </svg>
             <p>View My Blogs</p>
           </a>
+           </Link>
         </div>
           
           <div className="grid grid-cols-1  md:grid-cols-3 pb-40md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-10 lg:-mt-10 gap-y-20  ">
